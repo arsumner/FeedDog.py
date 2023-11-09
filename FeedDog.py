@@ -3,7 +3,7 @@ def feedDog(hunger_level, biscuit_size):
     biscuit_size.sort()
 
     dogs_fed = 0
-    for i in range(len(hunger_level)):
+    for i in hunger_level:
         for biscuit in biscuit_size:
             if biscuit_size[biscuit] >= hunger_level[i]:
                 dogs_fed += 1
