@@ -3,12 +3,13 @@ def feedDog(hunger_level, biscuit_size):
     biscuit_size.sort()
 
     dogs_fed = 0
-    for i in hunger_level:
-        for biscuit in biscuit_size:
-            if biscuit_size[biscuit] >= hunger_level[i]:
+    for i in range(len(hunger_level)):
+        for b in range(len(biscuit_size)):
+            if biscuit_size[b] >= hunger_level[i]:
                 dogs_fed += 1
-                biscuit_size.remove(biscuit_size[biscuit])
+                biscuit_size.remove(biscuit_size[b])
                 break
     return dogs_fed
 
-# print(feedDog([2, 1],[1,3,2]))
+
+#bprint(feedDog([2, 1],[1,3,2]))
